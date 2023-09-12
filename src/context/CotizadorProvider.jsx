@@ -26,9 +26,10 @@ const CotizadorProvider = ({ children }) => {
 
         // Obtener diferencia de años
         const diferencia = obtenerDiferenciaYear(datos.year);
-        console.log(diferencia);
-        // Hay que restar el 3% por cada año
 
+        // Hay que restar el 3% por cada año
+        resultado -= ((diferencia * 3) * resultado) / 100;
+        console.log(resultado);
         // Americano 15%
         // Europeo 30%
         // Asiatico 5%
